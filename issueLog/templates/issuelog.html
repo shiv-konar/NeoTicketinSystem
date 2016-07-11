@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block logform %}
+{% load crispy_forms_tags %}
+<form action="" method="POST">{% csrf_token %}
+    {{ form|crispy }}
+    <input type="submit" value="Submit">
+</form>
+{% endblock %}
